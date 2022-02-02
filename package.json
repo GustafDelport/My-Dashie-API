@@ -1,0 +1,28 @@
+{
+  "name": "my-dashie-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustafDelport/My-Dashie-API.git"
+  },
+  "author": "Gustaf Delport",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GustafDelport/My-Dashie-API/issues"
+  },
+  "homepage": "https://github.com/GustafDelport/My-Dashie-API#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.10"
+  },
+  "devDependencies": {
+    "dotenv": "^15.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
