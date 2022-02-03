@@ -1,15 +1,10 @@
 require('dotenv').config()
 
 const express = require('express');
-const cors = require('cors');
+var cors = require('cors');
 const app = express();
 
-//This function will prevent any domains and IP's that are not specified to access the API
-const corsOptions = {
-    origin: process.env.ORIGIN || 'http://localhost:5000'
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 const mongoose = require('mongoose');
 

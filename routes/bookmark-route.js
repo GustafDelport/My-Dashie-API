@@ -3,7 +3,7 @@
 module.exports = app => {
     const express = require('express')
     const router = express.Router()
-    const bookmark = require('../models/todos')
+    const bookmark = require('../models/bookmarks')
 
     //Endpoints go here
     router.get('/get', async (req,res) => {
