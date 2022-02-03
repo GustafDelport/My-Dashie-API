@@ -31,7 +31,7 @@ module.exports = app => {
     router.post('/add', async (req,res) => {
         try {
             const nwNote = new note({
-                _id: req.body.id,
+                _id: req.body._id,
                 title: req.body.title,
                 content: req.body.content,
             })
@@ -49,7 +49,7 @@ module.exports = app => {
         }
     })
 
-    router.put('/delete/:id', async (req, res) => {
+    router.delete('/delete/:id', async (req, res) => {
 
         note.findByIdAndDelete(req.params.id).then(b => {
             if (b) {res.status(200).json({message: "Yes"})}

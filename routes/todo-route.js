@@ -32,7 +32,7 @@ module.exports = app => {
     router.post('/add', async (req,res) => {
         try {
             const nwTodo = new todo({
-                _id: req.body.id,
+                _id: req.body._id,
                 text: req.body.text,
                 completed: req.body.completed,
             })
@@ -50,7 +50,7 @@ module.exports = app => {
         }
     })
 
-    router.put('/delete/:id', async (req, res) => {
+    router.delete('/delete/:id', async (req, res) => {
 
         todo.findByIdAndDelete(req.params.id).then(b => {
             if (b) {res.status(200).json({message: "Yes"})}

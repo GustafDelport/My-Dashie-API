@@ -34,11 +34,11 @@ module.exports = app => {
     router.post('/add', async (req,res) => {
         try {
             const nwBookmark = new bookmark({
-                _id: req.body.id,
+                _id: req.body._id,
                 name: req.body.name,
                 url: req.body.url,
             })
-
+            
             nwBookmark.save();
 
             res.status(200).json({
@@ -52,7 +52,7 @@ module.exports = app => {
         }
     })
 
-    router.put('/delete/:id', async (req, res) => {
+    router.delete('/delete/:id', async (req, res) => {
 
         bookmark.findByIdAndDelete(req.params.id).then(b => {
             if (b) {res.status(200).json({message: "Yes"})}
