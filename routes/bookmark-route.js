@@ -10,7 +10,6 @@ module.exports = app => {
         try {
             const bookmarks = await bookmark.find();
             res.status(200).json(bookmarks);
-    
         } catch (error) {
             res.status(500).json({
                 message: error.message
@@ -40,6 +39,7 @@ module.exports = app => {
             })
             
             nwBookmark.save();
+            // console.log(nwBookmark);
 
             res.status(200).json({
                 message: "Yes Boi",

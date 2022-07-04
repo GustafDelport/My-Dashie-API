@@ -12,6 +12,6 @@ const todosSchema = mongoose.Schema({
     }
 })
 
-const todos = mongoose.model('Todos', todosSchema)
+const todos = mongoose.model('todos', todosSchema)
 
 module.exports = todos

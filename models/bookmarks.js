@@ -13,6 +13,6 @@ const bookmarksSchema = mongoose.Schema({
     }
 })
 
-const bookmarks = mongoose.model('Bookmarks', bookmarksSchema)
+const bookmarks = mongoose.model('bookmarks', bookmarksSchema)
 
 module.exports = bookmarks

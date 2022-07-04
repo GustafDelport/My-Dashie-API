@@ -13,6 +13,6 @@ const notesSchema = mongoose.Schema({
     }
 })
 
-const notes = mongoose.model('Notes', notesSchema)
+const notes = mongoose.model('notes', notesSchema)
 
 module.exports = notes
